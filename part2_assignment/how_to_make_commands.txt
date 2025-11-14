@@ -1,0 +1,38 @@
+GUIDE: How to Create Global Command Shortcuts
+=============================================
+
+This guide explains how to set up 'factory' and 'belts' as globally-accessible commands on Windows.
+
+STEP 1: Create a Scripts Directory
+-----------------------------------
+Create a permanent folder for your command scripts.
+Recommended location: C:\Scripts
+
+STEP 2: Create factory.bat Script
+---------------------------------
+In your Scripts folder (C:\Scripts), create a new file named 'factory.bat' with this content:
+    @echo off
+    python %~dp0..\factory\main.py %*
+
+STEP 3: Create belts.bat Script
+-------------------------------
+In the same Scripts folder, create a new file named 'belts.bat' with this content:
+    @echo off
+    python %~dp0..\belts\main.py %*
+
+STEP 4: Add Scripts Folder to System PATH
+------------------------------------------
+To make these commands globally available:
+1. Right-click on "This PC" and select "Properties"
+2. Click "Advanced system settings"
+3. Click "Environment Variables"
+4. Under "System variables", select "Path" and click "Edit"
+5. Click "New" and add the path to your Scripts folder (C:\Scripts)
+6. Click OK multiple times to save changes
+7. Restart your terminal
+
+RESULT:
+------
+After completing these steps, you can now run from any directory:
+    factory < input.json > output.json
+    belts < input.json > output.json

@@ -1,0 +1,34 @@
+# Virtual environment
+.venv/
+venv/
+
+# Pytest cache
+.pytest_cache/
+.cache/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# IDE / editor settings
+.vscode/
+.idea/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Python virtualenv config
+pyvenv.cfg
+
+# Logs
+*.log
+
+# JSON sample outputs if generated dynamically
+tests/samples/*.out.json

@@ -1,0 +1,21 @@
+{
+  "nodes": ["s1", "s2", "a", "b", "c", "sink"],
+  "edges": [
+    {"from": "s1", "to": "a", "lo": 0, "hi": 900},
+    {"from": "s2", "to": "a", "lo": 0, "hi": 600},
+
+    {"from": "a", "to": "b", "lo": 0, "hi": 900},
+    {"from": "a", "to": "c", "lo": 0, "hi": 600},
+
+    {"from": "b", "to": "sink", "lo": 0, "hi": 900},
+    {"from": "c", "to": "sink", "lo": 0, "hi": 600}
+  ],
+  "node_caps": [
+    {"name": "a", "cap": 1500}
+  ],
+  "sources": [
+    {"name": "s1", "supply": 900},
+    {"name": "s2", "supply": 600}
+  ],
+  "sink": {"name": "sink"}
+}
